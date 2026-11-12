@@ -34,8 +34,8 @@ Tkinter is included in the standard Python installer on Windows and macOS; on Li
 with your package manager (e.g. `sudo apt install python3-tk`).
 
 ```bash
-git clone <repository URL>
-cd <repository folder>
+git clone https://github.com/samarsalame/FeatureEngineeringAssistant.git
+cd FeatureEngineeringAssistant
 
 # create and activate a virtual environment with Python 3.10
 py -3.10 -m venv venv            # Windows   (Linux/macOS: python3.10 -m venv venv)
@@ -125,7 +125,7 @@ If you use this software, please cite the accompanying paper:
 > S. Salame, A. Kanaan, H. Younis. Feature Engineering Assistant: An interactive desktop workbench
 > for transparent feature engineering and impact evaluation. *(submitted to SoftwareX)*
 
-and the archived software version: *(Zenodo DOI to be added)*.
+and the archived software version: [https://doi.org/10.5281/zenodo.24175685](https://doi.org/10.5281/zenodo.24175685).
 
 ## License
 
