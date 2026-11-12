@@ -1,0 +1,21 @@
+{
+  "title": "Feature Engineering Assistant: an interactive desktop workbench for transparent feature engineering and impact evaluation",
+  "upload_type": "software",
+  "description": "Open-source Python/Tkinter desktop application for dataset profiling, automated cleaning, latent feature generation (PCA, ICA, tabular autoencoder), manual pruning, supervised feature selection, a Latent Features Explorer and cross-validated stage-wise impact evaluation with significance tests. Includes a reproducibility capsule (paper_assets/) that regenerates all results and figures of the accompanying SoftwareX paper.",
+  "creators": [
+    {"name": "Salame, Samar", "affiliation": "Lebanese American University"},
+    {"name": "Kanaan, Aya", "affiliation": "Lebanese American University"},
+    {"name": "Younis, Hanin", "affiliation": "Lebanese American University"}
+  ],
+  "license": "MIT",
+  "keywords": [
+    "feature engineering",
+    "feature selection",
+    "autoencoder",
+    "PCA",
+    "ICA",
+    "Tkinter",
+    "machine learning",
+    "no-code"
+  ]
+}

@@ -1,0 +1,32 @@
+# Feature Engineering Assistant - runtime dependencies
+# Python 3.10 recommended (see README.md). Tkinter ships with the standard
+# Python installer on Windows/macOS; on Linux install it with your package
+# manager (e.g. `sudo apt install python3-tk`).
+
+# Data handling and statistics
+pandas
+numpy
+scipy
+
+# Machine learning
+scikit-learn
+xgboost==2.0.3
+lightgbm
+
+# Autoencoder (deep learning)
+tensorflow==2.13.0
+
+# Plots
+matplotlib
+seaborn
+Pillow
+
+# Report export (DOCX)
+python-docx
+
+# Profiling reports (Plots tab)
+ydata-profiling
+skimpy
+
+# Optional: word-cloud plot in the categorical column profile
+wordcloud

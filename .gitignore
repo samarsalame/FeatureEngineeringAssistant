@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Logs (contain local paths)
+*.log
+*_log.txt
+
+# Large datasets: not stored in git (GitHub limit is 100 MB per file)
+#   temperature.csv -> download from Kaggle (see paper_assets/scalability/README.md)
+#   wdbc_*.csv      -> regenerate with paper_assets/scalability/make_large_dataset.py
+temperature.csv
+paper_assets/scalability/data/
+*.zip
+
+# Outputs written by test runs
+paper_assets/scalability/results/stress_report.docx
+paper_assets/scalability/results/_export_tmp_*
+paper_assets/video/demo_pipeline_report.docx
+paper_assets/pipeline_report.docx
+
+# Paper drafts and manuscript sources (kept private until publication)
+Feature Paper*.docx
+Feature Engineering Assistant - SoftwareX.docx
+SoftwareX_Overleaf/
+softwarex sample.pdf
+paper_assets/build_paper.py
+paper_assets/docx_helpers.py
+paper_assets/build_softwarex.py
