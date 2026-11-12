@@ -1,0 +1,214 @@
+{
+  "after_cleaning_shape": [
+    569,
+    31
+  ],
+  "after_cleaning_columns": [
+    "diagnosis",
+    "radius_mean",
+    "texture_mean",
+    "perimeter_mean",
+    "area_mean",
+    "smoothness_mean",
+    "compactness_mean",
+    "concavity_mean",
+    "concave points_mean",
+    "symmetry_mean",
+    "fractal_dimension_mean",
+    "radius_se",
+    "texture_se",
+    "perimeter_se",
+    "area_se",
+    "smoothness_se",
+    "compactness_se",
+    "concavity_se",
+    "concave points_se",
+    "symmetry_se",
+    "fractal_dimension_se",
+    "radius_worst",
+    "texture_worst",
+    "perimeter_worst",
+    "area_worst",
+    "smoothness_worst",
+    "compactness_worst",
+    "concavity_worst",
+    "concave points_worst",
+    "symmetry_worst",
+    "fractal_dimension_worst"
+  ],
+  "feature_creation_seconds": 2.7,
+  "post_creation_shape": [
+    569,
+    47
+  ],
+  "feature_selection_seconds": 8.3,
+  "selected_features": [
+    "latent_ica_2",
+    "area_worst",
+    "perimeter_worst",
+    "radius_worst",
+    "concave points_worst",
+    "latent_pca_1",
+    "concave points_mean",
+    "concavity_mean",
+    "area_se",
+    "area_mean",
+    "radius_se",
+    "concavity_worst",
+    "perimeter_mean",
+    "radius_mean",
+    "latent_auto_1",
+    "texture_worst",
+    "perimeter_se",
+    "latent_auto_5",
+    "smoothness_worst",
+    "compactness_mean",
+    "latent_ica_5",
+    "latent_auto_4",
+    "concave points_se",
+    "texture_mean",
+    "latent_auto_2"
+  ],
+  "results_text_feature_selection": "FEATURE SELECTION COMPLETED\n\nModel used for importance: Random Forest\nTask type: Classification\n\nSelected 25 features:\n\n - latent_ica_2\n - area_worst\n - perimeter_worst\n - radius_worst\n - concave points_worst\n - latent_pca_1\n - concave points_mean\n - concavity_mean\n - area_se\n - area_mean\n - radius_se\n - concavity_worst\n - perimeter_mean\n - radius_mean\n - latent_auto_1\n - texture_worst\n - perimeter_se\n - latent_auto_5\n - smoothness_worst\n - compactness_mean\n - latent_ica_5\n - latent_auto_4\n - concave points_se\n - texture_mean\n - latent_auto_2\n\nK was chosen automatically via cross-validation: K = 25\n\nTop 10 by Mutual Information:\n  \u2022 latent_ica_2: 0.5046\n  \u2022 latent_pca_1: 0.4884\n  \u2022 perimeter_worst: 0.4789\n  \u2022 area_worst: 0.4643\n  \u2022 radius_worst: 0.4560\n  \u2022 concave points_mean: 0.4381\n  \u2022 concave points_worst: 0.4364\n  \u2022 latent_auto_1: 0.4086\n  \u2022 perimeter_mean: 0.4038\n  \u2022 latent_auto_5: 0.3866\n\nTop 10 by Random Forest importance:\n  \u2022 latent_pca_1: 0.1168\n  \u2022 perimeter_worst: 0.0926\n  \u2022 area_worst: 0.0922\n  \u2022 latent_ica_2: 0.0919\n  \u2022 concave points_worst: 0.0853\n  \u2022 radius_worst: 0.0780\n  \u2022 concave points_mean: 0.0706\n  \u2022 perimeter_mean: 0.0494\n  \u2022 area_mean: 0.0383\n  \u2022 latent_auto_1: 0.0353\n\n",
+  "evaluation_seconds": 5.7,
+  "results_text_eval": "EVALUATE IMPACT \u2014 Feature Engineering Pipeline\n\nStage                          | #features  |       accuracy |             f1 | \u0394 vs prev\n------------------------------------------------------------------------------------------\nBaseline (raw features)        |         32 | 0.9578 \u00b1 0.0102 | 0.9577 \u00b1 0.0103 |         \u2013\nFeature Creation (latent + pru |         46 | 0.9666 \u00b1 0.0085 | 0.9666 \u00b1 0.0086 | \u2191 +0.0089\nFeature Selection (current dat |         25 | 0.9684 \u00b1 0.0089 | 0.9684 \u00b1 0.0087 | \u2191 +0.0018\n\nOverall, the pipeline improved F1-score from 0.9577 to 0.9684 (+0.0107 absolute, +1.1% relative).\n\nStatistical Significance (paired t-test on per-fold F1-score):\n--------------------------------------------------------------------------------\nFrom                      \u2192 To                        |    p-value |   Cohen d\n--------------------------------------------------------------------------------\nBaseline (raw features)   \u2192 Feature Creation (latent + pruning) |    0.08784 |     1.005\nFeature Creation (latent + pruning) \u2192 Feature Selection (current dataset) |     0.6956 |     0.188\n\nEach row is based on k-fold cross-validation using the same model configuration across stages.\n\n",
+  "final_confusion": {
+    "labels": [
+      "B",
+      "M"
+    ],
+    "matrix": [
+      [
+        348,
+        9
+      ],
+      [
+        9,
+        203
+      ]
+    ]
+  },
+  "final_pooled_auc": 0.9941665345383436,
+  "eval": {
+    "main_metric": "f1",
+    "significance": [
+      {
+        "from": "Baseline (raw features)",
+        "to": "Feature Creation (latent + pruning)",
+        "p_value": 0.08784162393187372,
+        "effect_size": 1.005326565855595
+      },
+      {
+        "from": "Feature Creation (latent + pruning)",
+        "to": "Feature Selection (current dataset)",
+        "p_value": 0.6955871943829122,
+        "effect_size": 0.18814671347392695
+      }
+    ],
+    "stages": [
+      {
+        "n_features": 32,
+        "metrics": {
+          "accuracy": {
+            "mean": 0.9578326346840551,
+            "std": 0.010187806503281693
+          },
+          "f1": {
+            "mean": 0.9577382096768183,
+            "std": 0.010297395513478153
+          },
+          "precision": {
+            "mean": 0.9594676669683256,
+            "std": 0.010404727614129479
+          },
+          "recall": {
+            "mean": 0.9578326346840551,
+            "std": 0.010187806503281693
+          },
+          "roc_auc": {
+            "mean": 0.9881046723926679,
+            "std": 0.008191797336521457
+          }
+        },
+        "name": "Baseline (raw features)",
+        "delta_main": null
+      },
+      {
+        "n_features": 46,
+        "metrics": {
+          "accuracy": {
+            "mean": 0.9666356155876417,
+            "std": 0.008537691668180575
+          },
+          "f1": {
+            "mean": 0.96660058844362,
+            "std": 0.008579520408782366
+          },
+          "precision": {
+            "mean": 0.9677333288930734,
+            "std": 0.008414391340364022
+          },
+          "recall": {
+            "mean": 0.9666356155876417,
+            "std": 0.008537691668180575
+          },
+          "roc_auc": {
+            "mean": 0.9929728456873887,
+            "std": 0.0062367451781500894
+          }
+        },
+        "name": "Feature Creation (latent + pruning)",
+        "delta_main": 0.008862378766801626
+      },
+      {
+        "n_features": 25,
+        "metrics": {
+          "accuracy": {
+            "mean": 0.968390001552554,
+            "std": 0.008897014690510305
+          },
+          "f1": {
+            "mean": 0.9684114833033091,
+            "std": 0.008726557353285208
+          },
+          "precision": {
+            "mean": 0.9698711328687226,
+            "std": 0.00788776944371419
+          },
+          "recall": {
+            "mean": 0.968390001552554,
+            "std": 0.008897014690510305
+          },
+          "roc_auc": {
+            "mean": 0.995505570026533,
+            "std": 0.004748640559217721
+          }
+        },
+        "name": "Feature Selection (current dataset)",
+        "delta_main": 0.001810894859689105
+      }
+    ]
+  },
+  "dialogs": [
+    [
+      "showinfo",
+      "Dataset loaded",
+      "Dataset loaded successfully with 569 rows and 33 columns."
+    ],
+    [
+      "showinfo",
+      "Data cleaning complete",
+      "Data cleaning finished successfully. The current dataset has been updated."
+    ],
+    [
+      "showinfo",
+      "Settings Saved",
+      "Your choices have been saved successfully."
+    ],
+    [
+      "showinfo",
+      "Report exported",
+      "Report saved to:\nD:\\Vpythonfordatascience\\Project Feature Engineering\\paper_assets\\pipeline_report.docx"
+    ]
+  ]
+}

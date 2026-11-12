@@ -1,32 +1,12 @@
-# Feature Engineering Assistant - runtime dependencies
-# Python 3.10 recommended (see README.md). Tkinter ships with the standard
-# Python installer on Windows/macOS; on Linux install it with your package
-# manager (e.g. `sudo apt install python3-tk`).
+# Extra dependencies for the scripts that reproduce the paper results.
+# Install the application first:  pip install -r FinalFeatureEng/requirements.txt
+# then:                           pip install -r paper_assets/requirements.txt
+#
+# Note: capture_gui.py, record_demo.py, stress_gui.py and viz_stress.py drive
+# the GUI and take screenshots with Windows APIs; they run on Windows only.
+# benchmark.py, make_figures.py, make_architecture.py, make_large_dataset.py
+# and make_scalability.py are cross-platform.
 
-# Data handling and statistics
-pandas
-numpy
-scipy
-
-# Machine learning
-scikit-learn
-xgboost==2.0.3
-lightgbm
-
-# Autoencoder (deep learning)
-tensorflow==2.13.0
-
-# Plots
-matplotlib
-seaborn
-Pillow
-
-# Report export (DOCX)
-python-docx
-
-# Profiling reports (Plots tab)
-ydata-profiling
-skimpy
-
-# Optional: word-cloud plot in the categorical column profile
-wordcloud
+psutil          # memory measurement in the scalability tests
+imageio         # demo video (record_demo.py)
+imageio-ffmpeg  # bundled ffmpeg encoder for the demo video
